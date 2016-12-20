@@ -1,0 +1,4 @@
+
+#build library
+# the win32/Makefile.msc is modified by FayneWang
+nmake -f win32/Makefile.msc

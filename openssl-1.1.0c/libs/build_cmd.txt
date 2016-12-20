@@ -1,0 +1,11 @@
+#generate building makefile
+perl Configure --release no-shared threads zlib --with-zlib-include=../zlib-1.2.8 --with-zlib-lib=..\zlib-1.2.8/libs/vc12_Release_MD_Win32/zlib.lib VC-WIN32 --prefix="H:/ZZWorkspace/ZZExtraLibs/openssl-1.1.0c/libs/vc12_Rlease_Lib_MD_threads_zlib"
+
+perl Configure --debug no-shared threads zlib --with-zlib-include=../zlib-1.2.8 --with-zlib-lib=..\zlib-1.2.8/libs/vc12_Debug_MD_Win32/zlib.lib VC-WIN32 --prefix="H:/ZZWorkspace/ZZExtraLibs/openssl-1.1.0c/libs/vc12_Debug_Lib_MD_threads_zlib"
+
+perl Configure --release threads zlib --with-zlib-include=../zlib-1.2.8 --with-zlib-lib=..\zlib-1.2.8/libs/vc12_Release_MD_Win32/zlib.lib VC-WIN32 --prefix="H:/ZZWorkspace/ZZExtraLibs/openssl-1.1.0c/libs/vc12_Release_DLL_MD_threads_zlib"
+
+perl Configure --debug threads zlib --with-zlib-include=../zlib-1.2.8 --with-zlib-lib=..\zlib-1.2.8/libs/vc12_Debug_MD_Win32/zlib.lib VC-WIN32 --prefix="H:/ZZWorkspace/ZZExtraLibs/openssl-1.1.0c/libs/vc12_Debug_DLL_MD_threads_zlib"
+
+#build and install openssl 
+nmake install

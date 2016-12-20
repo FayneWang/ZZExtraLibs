@@ -1,0 +1,9 @@
+#release
+perl Configure VC-WIN32 --openssldir=./libs/vc120_x86_Release_MD threads zlib
+
+#debug
+perl Configure debug-VC-WIN32 --openssldir=./libs/vc120_x86_Debug_MD threads zlib
+
+ms\do_nasm
+nmake -f ms\ntdll.mak install
+nmake -f ms\nt.mak install

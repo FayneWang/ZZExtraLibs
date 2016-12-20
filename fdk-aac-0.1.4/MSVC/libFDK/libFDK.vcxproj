@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_Lib_MD|Win32">
+      <Configuration>Debug_Lib_MD</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Lib_MD|Win32">
+      <Configuration>Release_Lib_MD</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2B0B7BA0-CE43-4226-A7F9-204860E4C179}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libFDK</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Lib_MD|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Lib_MD|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug_Lib_MD|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release_Lib_MD|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Lib_MD|Win32'">
+    <IntDir>..\..\libs\$(PlatformToolset)_$(Configuration)_$(Platform)\obj\$(ProjectName)\</IntDir>
+    <OutDir>..\..\libs\$(PlatformToolset)_$(Configuration)_$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Lib_MD|Win32'">
+    <IntDir>..\..\libs\$(PlatformToolset)_$(Configuration)_$(Platform)\obj\$(ProjectName)\</IntDir>
+    <OutDir>..\..\libs\$(PlatformToolset)_$(Configuration)_$(Platform)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Lib_MD|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../libSYS/include;../../libFDK/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Lib_MD|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../libSYS/include;../../libFDK/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\libFDK\src\autocorr2nd.cpp" />
+    <ClCompile Include="..\..\libFDK\src\dct.cpp" />
+    <ClCompile Include="..\..\libFDK\src\FDK_bitbuffer.cpp" />
+    <ClCompile Include="..\..\libFDK\src\FDK_core.cpp" />
+    <ClCompile Include="..\..\libFDK\src\FDK_crc.cpp" />
+    <ClCompile Include="..\..\libFDK\src\FDK_hybrid.cpp" />
+    <ClCompile Include="..\..\libFDK\src\FDK_tools_rom.cpp" />
+    <ClCompile Include="..\..\libFDK\src\FDK_trigFcts.cpp" />
+    <ClCompile Include="..\..\libFDK\src\fft.cpp" />
+    <ClCompile Include="..\..\libFDK\src\fft_rad2.cpp" />
+    <ClCompile Include="..\..\libFDK\src\fixpoint_math.cpp" />
+    <ClCompile Include="..\..\libFDK\src\mdct.cpp" />
+    <ClCompile Include="..\..\libFDK\src\qmf.cpp" />
+    <ClCompile Include="..\..\libFDK\src\scale.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\libFDK\include\abs.h" />
+    <ClInclude Include="..\..\libFDK\include\autocorr2nd.h" />
+    <ClInclude Include="..\..\libFDK\include\clz.h" />
+    <ClInclude Include="..\..\libFDK\include\common_fix.h" />
+    <ClInclude Include="..\..\libFDK\include\cplx_mul.h" />
+    <ClInclude Include="..\..\libFDK\include\dct.h" />
+    <ClInclude Include="..\..\libFDK\include\FDK_archdef.h" />
+    <ClInclude Include="..\..\libFDK\include\FDK_bitbuffer.h" />
+    <ClInclude Include="..\..\libFDK\include\FDK_bitstream.h" />
+    <ClInclude Include="..\..\libFDK\include\FDK_core.h" />
+    <ClInclude Include="..\..\libFDK\include\FDK_crc.h" />
+    <ClInclude Include="..\..\libFDK\include\FDK_hybrid.h" />
+    <ClInclude Include="..\..\libFDK\include\FDK_tools_rom.h" />
+    <ClInclude Include="..\..\libFDK\include\FDK_trigFcts.h" />
+    <ClInclude Include="..\..\libFDK\include\fft.h" />
+    <ClInclude Include="..\..\libFDK\include\fft_rad2.h" />
+    <ClInclude Include="..\..\libFDK\include\fixmadd.h" />
+    <ClInclude Include="..\..\libFDK\include\fixminmax.h" />
+    <ClInclude Include="..\..\libFDK\include\fixmul.h" />
+    <ClInclude Include="..\..\libFDK\include\fixpoint_math.h" />
+    <ClInclude Include="..\..\libFDK\include\mdct.h" />
+    <ClInclude Include="..\..\libFDK\include\qmf.h" />
+    <ClInclude Include="..\..\libFDK\include\scale.h" />
+    <ClInclude Include="..\..\libFDK\include\scramble.h" />
+    <ClInclude Include="..\..\libFDK\include\x86\abs_x86.h" />
+    <ClInclude Include="..\..\libFDK\include\x86\clz_x86.h" />
+    <ClInclude Include="..\..\libFDK\include\x86\fixmul_x86.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

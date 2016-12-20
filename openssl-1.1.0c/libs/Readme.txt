@@ -1,0 +1,3 @@
+1¡¢Download ActivePerl install package in http://downloads.activestate.com/ActivePerl/releases/5.24.0.2400/ActivePerl-5.24.0.2400-MSWin32-x64-300558.exe
+2¡¢Execute Configure script to configure for build,and then run ../ms/nasm.bat to generate assemble makefile,final excute "nmake -f ../ms/nt(dll).mak" to build library.Just look like in the build_cmd.txt.
+3¡¢Modify /MT(d) FLAGS variable to /MD(d) in ../ms/nt(dll).mak 

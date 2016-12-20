@@ -1,0 +1,3 @@
+1¡¢ I have modify the ../ms/Makefile.msc file and using "by FayneWang" to comment in is.
+2¡¢ Original lib Makefile.msc is only the release lib/dll version in ../ms Dir.I have copy the original Makefile.msc and modify the compile flags in it for debug version.
+3¡¢ See the build_cmd to duild the zlib derectly.

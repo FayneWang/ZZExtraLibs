@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_Lib_MD|Win32">
+      <Configuration>Debug_Lib_MD</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Lib_MD|Win32">
+      <Configuration>Release_Lib_MD</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{44D5CADC-E640-4B7A-AB8F-5273E89336FF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libAACenc</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Lib_MD|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Lib_MD|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug_Lib_MD|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release_Lib_MD|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Lib_MD|Win32'">
+    <OutDir>..\..\libs\$(PlatformToolset)_$(Configuration)_$(Platform)\</OutDir>
+    <IntDir>..\..\libs\$(PlatformToolset)_$(Configuration)_$(Platform)\obj\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Lib_MD|Win32'">
+    <OutDir>..\..\libs\$(PlatformToolset)_$(Configuration)_$(Platform)\</OutDir>
+    <IntDir>..\..\libs\$(PlatformToolset)_$(Configuration)_$(Platform)\obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Lib_MD|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../libAACenc/include;../../libSYS/include;../../libFDK/include;../../libSBRenc/include;../../libMpegTPEnc/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Lib_MD|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../libAACenc/include;../../libSYS/include;../../libFDK/include;../../libSBRenc/include;../../libMpegTPEnc/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\libAACenc\src\aacenc.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\aacenc_hcr.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\aacenc_lib.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\aacenc_pns.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\aacEnc_ram.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\aacEnc_rom.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\aacenc_tns.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\adj_thr.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\bandwidth.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\band_nrg.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\bitenc.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\bit_cnt.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\block_switch.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\channel_map.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\chaosmeasure.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\dyn_bits.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\grp_data.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\intensity.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\line_pe.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\metadata_compressor.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\metadata_main.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\ms_stereo.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\noisedet.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\pnsparam.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\pre_echo_control.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\psy_configuration.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\psy_main.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\qc_main.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\quantize.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\sf_estim.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\spreading.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\tonality.cpp" />
+    <ClCompile Include="..\..\libAACenc\src\transform.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\libAACenc\include\aacenc_lib.h" />
+    <ClInclude Include="..\..\libAACenc\src\aacenc.h" />
+    <ClInclude Include="..\..\libAACenc\src\aacenc_hcr.h" />
+    <ClInclude Include="..\..\libAACenc\src\aacenc_pns.h" />
+    <ClInclude Include="..\..\libAACenc\src\aacEnc_ram.h" />
+    <ClInclude Include="..\..\libAACenc\src\aacEnc_rom.h" />
+    <ClInclude Include="..\..\libAACenc\src\aacenc_tns.h" />
+    <ClInclude Include="..\..\libAACenc\src\adj_thr.h" />
+    <ClInclude Include="..\..\libAACenc\src\adj_thr_data.h" />
+    <ClInclude Include="..\..\libAACenc\src\bandwidth.h" />
+    <ClInclude Include="..\..\libAACenc\src\band_nrg.h" />
+    <ClInclude Include="..\..\libAACenc\src\bitenc.h" />
+    <ClInclude Include="..\..\libAACenc\src\bit_cnt.h" />
+    <ClInclude Include="..\..\libAACenc\src\block_switch.h" />
+    <ClInclude Include="..\..\libAACenc\src\channel_map.h" />
+    <ClInclude Include="..\..\libAACenc\src\chaosmeasure.h" />
+    <ClInclude Include="..\..\libAACenc\src\dyn_bits.h" />
+    <ClInclude Include="..\..\libAACenc\src\grp_data.h" />
+    <ClInclude Include="..\..\libAACenc\src\intensity.h" />
+    <ClInclude Include="..\..\libAACenc\src\interface.h" />
+    <ClInclude Include="..\..\libAACenc\src\line_pe.h" />
+    <ClInclude Include="..\..\libAACenc\src\metadata_compressor.h" />
+    <ClInclude Include="..\..\libAACenc\src\metadata_main.h" />
+    <ClInclude Include="..\..\libAACenc\src\ms_stereo.h" />
+    <ClInclude Include="..\..\libAACenc\src\noisedet.h" />
+    <ClInclude Include="..\..\libAACenc\src\pnsparam.h" />
+    <ClInclude Include="..\..\libAACenc\src\pns_func.h" />
+    <ClInclude Include="..\..\libAACenc\src\pre_echo_control.h" />
+    <ClInclude Include="..\..\libAACenc\src\psy_configuration.h" />
+    <ClInclude Include="..\..\libAACenc\src\psy_const.h" />
+    <ClInclude Include="..\..\libAACenc\src\psy_data.h" />
+    <ClInclude Include="..\..\libAACenc\src\psy_main.h" />
+    <ClInclude Include="..\..\libAACenc\src\qc_data.h" />
+    <ClInclude Include="..\..\libAACenc\src\qc_main.h" />
+    <ClInclude Include="..\..\libAACenc\src\quantize.h" />
+    <ClInclude Include="..\..\libAACenc\src\sf_estim.h" />
+    <ClInclude Include="..\..\libAACenc\src\spreading.h" />
+    <ClInclude Include="..\..\libAACenc\src\tns_func.h" />
+    <ClInclude Include="..\..\libAACenc\src\tonality.h" />
+    <ClInclude Include="..\..\libAACenc\src\transform.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

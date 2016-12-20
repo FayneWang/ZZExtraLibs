@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libSBRenc", "libSBRenc\libSBRenc.vcxproj", "{E32BF9D0-1759-43AA-84E3-E6CD51EA0E9D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libFDK", "libFDK\libFDK.vcxproj", "{2B0B7BA0-CE43-4226-A7F9-204860E4C179}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libSYS", "libSYS\libSYS.vcxproj", "{8B6D1E50-5824-4E58-841D-16252DAE7761}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libMpegTPEnc", "libMpegTPEnc\libMpegTPEnc.vcxproj", "{9578B8DB-ACFC-4ED2-A218-D955AD6E5DFB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libMpegTPDec", "libMpegTPDec\libMpegTPDec.vcxproj", "{65688F72-E0D6-469A-9CCD-03F89795D44F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libAACenc", "libAACenc\libAACenc.vcxproj", "{44D5CADC-E640-4B7A-AB8F-5273E89336FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Lib_MD|Win32 = Debug_Lib_MD|Win32
+		Release_Lib_MD|Win32 = Release_Lib_MD|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E32BF9D0-1759-43AA-84E3-E6CD51EA0E9D}.Debug_Lib_MD|Win32.ActiveCfg = Debug_Lib_MD|Win32
+		{E32BF9D0-1759-43AA-84E3-E6CD51EA0E9D}.Debug_Lib_MD|Win32.Build.0 = Debug_Lib_MD|Win32
+		{E32BF9D0-1759-43AA-84E3-E6CD51EA0E9D}.Release_Lib_MD|Win32.ActiveCfg = Release_Lib_MD|Win32
+		{E32BF9D0-1759-43AA-84E3-E6CD51EA0E9D}.Release_Lib_MD|Win32.Build.0 = Release_Lib_MD|Win32
+		{2B0B7BA0-CE43-4226-A7F9-204860E4C179}.Debug_Lib_MD|Win32.ActiveCfg = Debug_Lib_MD|Win32
+		{2B0B7BA0-CE43-4226-A7F9-204860E4C179}.Debug_Lib_MD|Win32.Build.0 = Debug_Lib_MD|Win32
+		{2B0B7BA0-CE43-4226-A7F9-204860E4C179}.Release_Lib_MD|Win32.ActiveCfg = Release_Lib_MD|Win32
+		{2B0B7BA0-CE43-4226-A7F9-204860E4C179}.Release_Lib_MD|Win32.Build.0 = Release_Lib_MD|Win32
+		{8B6D1E50-5824-4E58-841D-16252DAE7761}.Debug_Lib_MD|Win32.ActiveCfg = Debug_Lib_MD|Win32
+		{8B6D1E50-5824-4E58-841D-16252DAE7761}.Debug_Lib_MD|Win32.Build.0 = Debug_Lib_MD|Win32
+		{8B6D1E50-5824-4E58-841D-16252DAE7761}.Release_Lib_MD|Win32.ActiveCfg = Release_Lib_MD|Win32
+		{8B6D1E50-5824-4E58-841D-16252DAE7761}.Release_Lib_MD|Win32.Build.0 = Release_Lib_MD|Win32
+		{9578B8DB-ACFC-4ED2-A218-D955AD6E5DFB}.Debug_Lib_MD|Win32.ActiveCfg = Debug_Lib_MD|Win32
+		{9578B8DB-ACFC-4ED2-A218-D955AD6E5DFB}.Debug_Lib_MD|Win32.Build.0 = Debug_Lib_MD|Win32
+		{9578B8DB-ACFC-4ED2-A218-D955AD6E5DFB}.Release_Lib_MD|Win32.ActiveCfg = Release_Lib_MD|Win32
+		{9578B8DB-ACFC-4ED2-A218-D955AD6E5DFB}.Release_Lib_MD|Win32.Build.0 = Release_Lib_MD|Win32
+		{65688F72-E0D6-469A-9CCD-03F89795D44F}.Debug_Lib_MD|Win32.ActiveCfg = Debug_Lib_MD|Win32
+		{65688F72-E0D6-469A-9CCD-03F89795D44F}.Debug_Lib_MD|Win32.Build.0 = Debug_Lib_MD|Win32
+		{65688F72-E0D6-469A-9CCD-03F89795D44F}.Release_Lib_MD|Win32.ActiveCfg = Release_Lib_MD|Win32
+		{65688F72-E0D6-469A-9CCD-03F89795D44F}.Release_Lib_MD|Win32.Build.0 = Release_Lib_MD|Win32
+		{44D5CADC-E640-4B7A-AB8F-5273E89336FF}.Debug_Lib_MD|Win32.ActiveCfg = Debug_Lib_MD|Win32
+		{44D5CADC-E640-4B7A-AB8F-5273E89336FF}.Debug_Lib_MD|Win32.Build.0 = Debug_Lib_MD|Win32
+		{44D5CADC-E640-4B7A-AB8F-5273E89336FF}.Release_Lib_MD|Win32.ActiveCfg = Release_Lib_MD|Win32
+		{44D5CADC-E640-4B7A-AB8F-5273E89336FF}.Release_Lib_MD|Win32.Build.0 = Release_Lib_MD|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

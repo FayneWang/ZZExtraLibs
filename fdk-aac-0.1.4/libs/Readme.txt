@@ -1,0 +1,1 @@
+1¡¢This is a static library,use Visual Studio 2013 open ../MSVC/fdk-aac.sln file and build it.

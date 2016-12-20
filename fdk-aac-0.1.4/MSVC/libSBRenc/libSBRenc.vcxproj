@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_Lib_MD|Win32">
+      <Configuration>Debug_Lib_MD</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Lib_MD|Win32">
+      <Configuration>Release_Lib_MD</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E32BF9D0-1759-43AA-84E3-E6CD51EA0E9D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libSBRenc</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Lib_MD|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Lib_MD|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug_Lib_MD|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release_Lib_MD|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Lib_MD|Win32'">
+    <IntDir>..\..\libs\$(PlatformToolset)_$(Configuration)_$(Platform)\obj\$(ProjectName)\</IntDir>
+    <OutDir>..\..\libs\$(PlatformToolset)_$(Configuration)_$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Lib_MD|Win32'">
+    <IntDir>..\..\libs\$(PlatformToolset)_$(Configuration)_$(Platform)\obj\$(ProjectName)\</IntDir>
+    <OutDir>..\..\libs\$(PlatformToolset)_$(Configuration)_$(Platform)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Lib_MD|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../libSYS/include;../../libFDK/include;../../libSBRenc/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Lib_MD|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../libSYS/include;../../libFDK/include;../../libSBRenc/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\libSBRenc\src\bit_sbr.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\code_env.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\env_bit.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\env_est.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\fram_gen.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\invf_est.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\mh_det.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\nf_est.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\ps_bitenc.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\ps_encode.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\ps_main.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\resampler.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\sbrenc_freq_sca.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\sbr_encoder.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\sbr_misc.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\sbr_ram.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\sbr_rom.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\ton_corr.cpp" />
+    <ClCompile Include="..\..\libSBRenc\src\tran_det.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\libSBRenc\include\sbr_encoder.h" />
+    <ClInclude Include="..\..\libSBRenc\src\bit_sbr.h" />
+    <ClInclude Include="..\..\libSBRenc\src\cmondata.h" />
+    <ClInclude Include="..\..\libSBRenc\src\code_env.h" />
+    <ClInclude Include="..\..\libSBRenc\src\env_bit.h" />
+    <ClInclude Include="..\..\libSBRenc\src\env_est.h" />
+    <ClInclude Include="..\..\libSBRenc\src\fram_gen.h" />
+    <ClInclude Include="..\..\libSBRenc\src\invf_est.h" />
+    <ClInclude Include="..\..\libSBRenc\src\mh_det.h" />
+    <ClInclude Include="..\..\libSBRenc\src\nf_est.h" />
+    <ClInclude Include="..\..\libSBRenc\src\ps_bitenc.h" />
+    <ClInclude Include="..\..\libSBRenc\src\ps_const.h" />
+    <ClInclude Include="..\..\libSBRenc\src\ps_encode.h" />
+    <ClInclude Include="..\..\libSBRenc\src\ps_main.h" />
+    <ClInclude Include="..\..\libSBRenc\src\resampler.h" />
+    <ClInclude Include="..\..\libSBRenc\src\sbr.h" />
+    <ClInclude Include="..\..\libSBRenc\src\sbrenc_freq_sca.h" />
+    <ClInclude Include="..\..\libSBRenc\src\sbr_def.h" />
+    <ClInclude Include="..\..\libSBRenc\src\sbr_misc.h" />
+    <ClInclude Include="..\..\libSBRenc\src\sbr_ram.h" />
+    <ClInclude Include="..\..\libSBRenc\src\sbr_rom.h" />
+    <ClInclude Include="..\..\libSBRenc\src\ton_corr.h" />
+    <ClInclude Include="..\..\libSBRenc\src\tran_det.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
