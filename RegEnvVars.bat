@@ -1,6 +1,6 @@
+ï»¿
 
-
-echo Ìí¼Ó¹«¹²¿â»·¾³±äÁ¿
+echo æ·»åŠ å…¬å…±åº“ç¯å¢ƒå˜é‡
 set regpath=HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
 set MSBuildFilesDir=".\ZZExtraLibsConfig\MSBuildFiles"
 copy /-Y "%MSBuildFilesDir%\Microsoft.Cpp.Win32.user.props" "%LOCALAPPDATA%\Microsoft\MSBuild\v4.0"

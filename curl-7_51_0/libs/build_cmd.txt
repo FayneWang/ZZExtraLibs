@@ -1,0 +1,27 @@
+﻿#For WITH_ZLIB
+1、Copy .\zlib-1.2.8\zlib.h to the ./deps/include directory.
+
+2、Copy zlib.lib and zdll.lib to the ./deps/include directory from .\zlib-1.2.8\libs\vc12_x86_Release_MD directory.
+
+#For WITH_CARES
+3、Copy heads file(ares.h、ares_build.h、ares_rules.h、ares_version.h) to the the ./deps/include directory.
+
+4、In ares.h #define CARES_STATICLIB macro for WITH_CARES=static,Because use the WITH_CARES=static, must define macro CARES_STATICLIB when compile curl or others.
+
+5、Copy library 
+
+6、Modify the content at line 161、line 165、line 256 and line 257 in ./winbuild/Makefile.
+
+7、 cd winbuild
+
+# Dynamic debug library.
+nmake /f Makefile.vc mode=dll VC=12 WITH_ZLIB=static WITH_CARES=static ENABLE_SSPI=yes ENABLE_IPV6=yes ENABLE_IDN=yes ENABLE_WINSSL=yes GEN_PDB=yes DEBUG=yes MACHINE=x86
+
+# Dynamic release library.
+nmake /f Makefile.vc mode=dll VC=12 WITH_ZLIB=static WITH_CARES=static ENABLE_SSPI=yes ENABLE_IPV6=yes ENABLE_IDN=yes ENABLE_WINSSL=yes GEN_PDB=yes DEBUG=no MACHINE=x86
+
+# Static debug library.
+nmake /f Makefile.vc mode=static VC=12 WITH_ZLIB=static WITH_CARES=static ENABLE_SSPI=yes ENABLE_IPV6=yes ENABLE_IDN=yes ENABLE_WINSSL=yes GEN_PDB=yes DEBUG=yes MACHINE=x86
+
+# Static release library.
+nmake /f Makefile.vc mode=static VC=12 WITH_ZLIB=static WITH_CARES=static ENABLE_SSPI=yes ENABLE_IPV6=yes ENABLE_IDN=yes ENABLE_WINSSL=yes GEN_PDB=yes DEBUG=no MACHINE=x86
