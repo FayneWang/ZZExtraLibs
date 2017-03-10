@@ -4,7 +4,7 @@
 		<ExecutablePath>$(ExecutablePath)</ExecutablePath>
 		<IncludePath>$(IncludePath)</IncludePath>
 		<ReferencePath>$(ReferencePath)</ReferencePath>
-		<LibraryPath>$(LibraryPath);$(ZZ_EXTRA_LIBS_HOME)</LibraryPath>
+		<LibraryPath>$(LibraryPath);$(ZZCppLibsHome)</LibraryPath>
 		<SourcePath>$(SourcePath)</SourcePath>
 		<ExcludePath>$(ExcludePath)</ExcludePath>
 	</PropertyGroup>
