@@ -7,3 +7,9 @@
 [submodule "zlib/original_repo"]
 	path = zlib/original_repo
 	url = https://github.com/madler/zlib.git
+	
+	
+	
+[submodule "duilib/original_repo"]
+	path = duilib/original_repo
+	url = https://github.com/duilib/duilib.git
