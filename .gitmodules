@@ -13,3 +13,6 @@
 [submodule "easyloggingpp/original_repo"]
 	path = easyloggingpp/original_repo
 	url = https://github.com/muflihun/easyloggingpp.git
+[submodule "ZZCommon/original_repo"]
+	path = ZZCommon/original_repo
+	url = https://github.com/FayneWang/ZZCommon.git
