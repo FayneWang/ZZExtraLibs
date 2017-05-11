@@ -10,3 +10,6 @@
 [submodule "duilib/original_repo"]
 	path = DuiLib/original_repo
 	url = https://github.com/duilib/duilib.git
+[submodule "easyloggingpp/original_repo"]
+	path = easyloggingpp/original_repo
+	url = https://github.com/muflihun/easyloggingpp.git
