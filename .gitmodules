@@ -19,3 +19,6 @@
 [submodule "ZZCommon/original_repo"]
 	path = ZZCommon/original_repo
 	url = https://github.com/FayneWang/ZZCommon.git
+[submodule "curl/original_repo"]
+	path = curl/original_repo
+	url = https://github.com/curl/curl.git
