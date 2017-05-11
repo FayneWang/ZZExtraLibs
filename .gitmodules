@@ -10,3 +10,6 @@
 [submodule "duilib/original_repo"]
 	path = DuiLib/original_repo
 	url = https://github.com/duilib/duilib.git
+[submodule "libyuv/original_repo"]
+	path = libyuv/original_repo
+	url = https://github.com/FayneWang/libyuv.git
